@@ -3,7 +3,7 @@ import { DiaryStateContext } from "./App";
 import DiaryItem from "./DiaryItem";
 
 const DiaryList = () => {
-  const { data } = useContext(DiaryStateContext);
+  const data = useContext(DiaryStateContext);
 
   return (
     <div className="DiaryList">

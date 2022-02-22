@@ -1,7 +1,7 @@
 import { message, Modal } from "antd";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
-import { DiaryStateContext } from "./App";
+import { DiaryDispatchContext } from "./App";
 
 const DiaryItem = ({
   author,
@@ -12,7 +12,7 @@ const DiaryItem = ({
   // onRemove,
   // onUpdate,
 }) => {
-  const { onUpdate, onRemove } = useContext(DiaryStateContext);
+  const { onRemove, onUpdate } = useContext(DiaryDispatchContext);
 
   const [isRemoveModalVisible, setIsRemoveModalVisible] = useState(false);
   const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);

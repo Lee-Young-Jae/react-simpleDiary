@@ -1,7 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useRef, useState } from "react";
 import { message } from "antd";
+import { DiaryDispatchContext } from "./App";
 
-const DiaryEditor = ({ onCreate }) => {
+const DiaryEditor = () => {
+  const { onCreate } = useContext(DiaryDispatchContext);
+
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
   const [emotionValue, setEmotionValue] = useState(1);
